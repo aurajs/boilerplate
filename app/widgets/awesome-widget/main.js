@@ -3,5 +3,5 @@ define(['text!./awesome.hbs'], function(template) {
     initialize: function() {
       this.html(template);
     }
-  }
+  };
 });
