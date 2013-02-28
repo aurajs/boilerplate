@@ -1,5 +1,7 @@
 define(['components/aura/lib/aura'], function(Aura) {
-  Aura({ }).start({ widgets: 'body' }).then(function() {
-    console.warn('aura started...');
-  });
+  Aura()
+    .use('extensions/aura-awesome-extension')
+    .start({ widgets: 'body' }).then(function() {
+      console.warn('Aura started...');
+    });
 });
