@@ -27,12 +27,12 @@ module.exports = function (grunt) {
 
     // default watch configuration
     watch: {
-      widgets: {
-        files: ['app/widgets/**/*.js'],
+      aura_components: {
+        files: ['app/aura_components/**/*.js'],
         tasks: ['concat']
       },
       handlebars: {
-        files: ['app/widgets/**/*.hbs'],
+        files: ['app/aura_components/**/*.hbs'],
         tasks: ['handlebars']
       },
       livereload: {
@@ -49,20 +49,20 @@ module.exports = function (grunt) {
     jshint: {
       all: [
         'app/scripts/[^templates].js',
-        'app/widgets/**/*.js'
+        'app/aura_components/**/*.js'
       ]
     },
 
     handlebars: {
       compile: {
         files: {
-          "app/scripts/templates.js" : ["app/widgets/**/*.hbs"]
+          "app/scripts/templates.js" : ["app/aura_components/**/*.hbs"]
         },
         options: {
           wrapped: true,
           namespace: "Handlebars.templates",
           processName: function (filename) {
-            return filename.replace(/^app\/widgets\//, '').replace(/\.hbs$/, '');
+            return filename.replace(/^app\/aura_components\//, '').replace(/\.hbs$/, '');
           }
         }
       }
@@ -168,8 +168,8 @@ module.exports = function (grunt) {
         separator: "\n\n\n\n//--------\n\n\n"
       },
       dist: {
-        src: ['app/widgets/**/*.js'],
-        dest: 'app/scripts/widgets.js'
+        src: ['app/aura_components/**/*.js'],
+        dest: 'app/scripts/aura_components.js'
       }
     }
 
