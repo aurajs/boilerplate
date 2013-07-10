@@ -175,10 +175,6 @@ module.exports = function (grunt) {
 
   });
 
-  grunt.renameTask('regarde', 'watch');
-
-  grunt.renameTask('mincss', 'cssmin');
-
   grunt.registerTask('server', [
     'clean:server',
     'livereload-start',
