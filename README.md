@@ -1,6 +1,7 @@
 ## Requirements
 
 [bower](http://bower.io/): run `npm install -g bower` if needed
+
 [grunt-cli](http://gruntjs.com/getting-started): run `npm install -g grunt-cli` if needed
 
 ## Setup
