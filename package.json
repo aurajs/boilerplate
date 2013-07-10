@@ -1,6 +1,6 @@
 {
-  "name": "aurahub",
-  "description": "Aura Demo - Integration with Github's APIs",
+  "name": "aura-boilerplate",
+  "description": "A boilerplate for Aura widgets",
   "version": "0.1.0",
   "author": {
     "name": "Stephane Bellity & Addy Osmani"
@@ -19,7 +19,7 @@
     "node": "0.8.x"
   },
   "devDependencies": {
-    "grunt": "0.4.0rc7",
+    "grunt": "0.4.0",
     "grunt-contrib-handlebars": "0.5.4rc7",
     "grunt-contrib-copy": "0.4.0rc7",
     "grunt-contrib-concat": "0.1.2rc6",
@@ -27,7 +27,7 @@
     "grunt-contrib-jshint": "0.1.1rc6",
     "grunt-contrib-mincss": "0.4.0rc7",
     "grunt-contrib-connect": "0.1.1rc6",
-    "grunt-contrib-clean": "0.4.0rc6",
+    "grunt-contrib-clean": "0.4.0",
     "grunt-contrib-htmlmin": "0.1.1rc7",
     "grunt-contrib-imagemin": "0.1.1rc8",
     "grunt-contrib-livereload": "0.1.0rc8",
@@ -37,5 +37,5 @@
     "grunt-open": "~0.1.0",
     "matchdep": "~0.1.1"
   },
-  "keywords": []
+  "keywords": [aurajs, bootstrap, extensions, api]
 }
