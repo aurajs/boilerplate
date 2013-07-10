@@ -117,8 +117,8 @@ module.exports = function (grunt) {
       dist: {
         files: {
           'dist/application.css': [
-            'app/components/ratchet/dist/ratchet.css',
-            'app/components/font-awesome/css/font-awesome.css',
+            'app/bower_components/ratchet/dist/ratchet.css',
+            'app/bower_components/font-awesome/css/font-awesome.css',
             'app/styles/*.css'
           ]
         }
@@ -199,7 +199,6 @@ module.exports = function (grunt) {
     'jshint',
     'handlebars',
     'useminPrepare',
-
     'uglify',
     'imagemin',
     'htmlmin',
