@@ -1,5 +1,5 @@
 {
-  "name": "aurahub",
+  "name": "aura-boilerplate",
   "description": "Aura Demo - Integration with Github's APIs",
   "version": "0.1.0",
   "author": {
@@ -37,5 +37,5 @@
     "grunt-open": "~0.1.0",
     "matchdep": "~0.1.1"
   },
-  "keywords": [aurajs, bootstrap, github, api]
+  "keywords": [aurajs, bootstrap, extensions, api]
 }
