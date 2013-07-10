@@ -1,6 +1,6 @@
 {
   "name": "aura-boilerplate",
-  "description": "Aura Demo - Integration with Github's APIs",
+  "description": "A boilerplate for Aura widgets",
   "version": "0.1.0",
   "author": {
     "name": "Stephane Bellity & Addy Osmani"
