@@ -37,5 +37,5 @@
     "grunt-open": "~0.1.0",
     "matchdep": "~0.1.1"
   },
-  "keywords": [aura, bootstrap, github, api]
+  "keywords": [aurajs, bootstrap, github, api]
 }
