@@ -116,7 +116,7 @@ module.exports = function (grunt) {
     cssmin: {
       dist: {
         files: {
-          'dist/application.css': [
+          'dist/css/application.css': [
             'app/bower_components/ratchet/dist/ratchet.css',
             'app/bower_components/font-awesome/css/font-awesome.css',
             'app/styles/*.css'
