@@ -131,7 +131,7 @@ module.exports = function (grunt) {
           { dest: 'dist/index.php', src: 'dist/index.html' },
           { cwd: 'app/', dest: 'dist/', src: ['.htaccess', 'robots.txt'], expand: true },
           {
-            cwd: 'app/components/font-awesome/font/',
+            cwd: 'app/bower_components/font-awesome/font/',
             dest: 'dist/font/',
             filter: 'isFile',
             src: '*',
