@@ -27,12 +27,12 @@ module.exports = function (grunt) {
 
     // default watch configuration
     watch: {
-      widgets: {
-        files: ['app/widgets/**/*.js'],
+      aura_components: {
+        files: ['app/aura_components/**/*.js'],
         tasks: ['concat']
       },
       handlebars: {
-        files: ['app/widgets/**/*.hbs'],
+        files: ['app/aura_components/**/*.hbs'],
         tasks: ['handlebars']
       },
       livereload: {
@@ -49,20 +49,20 @@ module.exports = function (grunt) {
     jshint: {
       all: [
         'app/scripts/[^templates].js',
-        'app/widgets/**/*.js'
+        'app/aura_components/**/*.js'
       ]
     },
 
     handlebars: {
       compile: {
         files: {
-          "app/scripts/templates.js" : ["app/widgets/**/*.hbs"]
+          "app/scripts/templates.js" : ["app/aura_components/**/*.hbs"]
         },
         options: {
           wrapped: true,
           namespace: "Handlebars.templates",
           processName: function (filename) {
-            return filename.replace(/^app\/widgets\//, '').replace(/\.hbs$/, '');
+            return filename.replace(/^app\/aura_components\//, '').replace(/\.hbs$/, '');
           }
         }
       }
@@ -116,9 +116,9 @@ module.exports = function (grunt) {
     cssmin: {
       dist: {
         files: {
-          'dist/application.css': [
-            'app/components/ratchet/dist/ratchet.css',
-            'app/components/font-awesome/css/font-awesome.css',
+          'dist/css/application.css': [
+            'app/bower_components/ratchet/dist/ratchet.css',
+            'app/bower_components/font-awesome/css/font-awesome.css',
             'app/styles/*.css'
           ]
         }
@@ -131,7 +131,7 @@ module.exports = function (grunt) {
           { dest: 'dist/index.php', src: 'dist/index.html' },
           { cwd: 'app/', dest: 'dist/', src: ['.htaccess', 'robots.txt'], expand: true },
           {
-            cwd: 'app/components/font-awesome/font/',
+            cwd: 'app/bower_components/font-awesome/font/',
             dest: 'dist/font/',
             filter: 'isFile',
             src: '*',
@@ -168,16 +168,12 @@ module.exports = function (grunt) {
         separator: "\n\n\n\n//--------\n\n\n"
       },
       dist: {
-        src: ['app/widgets/**/*.js'],
-        dest: 'app/scripts/widgets.js'
+        src: ['app/aura_components/**/*.js'],
+        dest: 'app/scripts/aura_components.js'
       }
     }
 
   });
-
-  grunt.renameTask('regarde', 'watch');
-
-  grunt.renameTask('mincss', 'cssmin');
 
   grunt.registerTask('server', [
     'clean:server',
@@ -199,7 +195,6 @@ module.exports = function (grunt) {
     'jshint',
     'handlebars',
     'useminPrepare',
-
     'uglify',
     'imagemin',
     'htmlmin',
