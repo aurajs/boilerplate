@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "dependencies": {
     "jquery": "~1.10.x",
-    "aura" : "latest",
-    "ratchet": "~1.0.x",
-    "font-awesome": "~3.2.x"
+    "aura" : "latest"
   }
 }

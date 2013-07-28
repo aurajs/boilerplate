@@ -117,8 +117,6 @@ module.exports = function (grunt) {
       dist: {
         files: {
           'dist/css/application.css': [
-            'app/bower_components/ratchet/dist/ratchet.css',
-            'app/bower_components/font-awesome/css/font-awesome.css',
             'app/styles/*.css'
           ]
         }
@@ -129,14 +127,7 @@ module.exports = function (grunt) {
       dist: {
         files: [
           { dest: 'dist/index.php', src: 'dist/index.html' },
-          { cwd: 'app/', dest: 'dist/', src: ['.htaccess', 'robots.txt'], expand: true },
-          {
-            cwd: 'app/bower_components/font-awesome/font/',
-            dest: 'dist/font/',
-            filter: 'isFile',
-            src: '*',
-            expand: true
-          }
+          { cwd: 'app/', dest: 'dist/', src: ['.htaccess', 'robots.txt'], expand: true }
         ]
       }
     },
